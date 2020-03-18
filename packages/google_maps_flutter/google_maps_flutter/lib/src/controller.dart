@@ -114,7 +114,7 @@ class GoogleMapController {
   /// platform side.
   ///
   /// The returned [Future] completes after listeners have been notified.
-  Future<void> _updateMarkers(_MarkerUpdates markerUpdates) async {
+  Future<void> updateMarkers(MarkerUpdates markerUpdates) async {
     assert(markerUpdates != null);
     await channel.invokeMethod<void>(
       'markers#update',

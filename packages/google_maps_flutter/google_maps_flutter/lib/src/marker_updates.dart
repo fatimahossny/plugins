@@ -7,9 +7,10 @@ part of google_maps_flutter;
 /// [Marker] update events to be applied to the [GoogleMap].
 ///
 /// Used in [GoogleMapController] when the map is updated.
-class _MarkerUpdates {
+
+class MarkerUpdates {
   /// Computes [_MarkerUpdates] given previous and current [Marker]s.
-  _MarkerUpdates.from(Set<Marker> previous, Set<Marker> current) {
+  MarkerUpdates.from(Set<Marker> previous, Set<Marker> current) {
     if (previous == null) {
       previous = Set<Marker>.identity();
     }
@@ -79,7 +80,7 @@ class _MarkerUpdates {
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
     if (other.runtimeType != runtimeType) return false;
-    final _MarkerUpdates typedOther = other;
+    final MarkerUpdates typedOther = other;
     return setEquals(markersToAdd, typedOther.markersToAdd) &&
         setEquals(markerIdsToRemove, typedOther.markerIdsToRemove) &&
         setEquals(markersToChange, typedOther.markersToChange);
