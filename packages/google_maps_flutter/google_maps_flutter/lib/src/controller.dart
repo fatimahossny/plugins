@@ -110,7 +110,7 @@ class GoogleMapController {
   /// platform side.
   ///
   /// The returned [Future] completes after listeners have been notified.
-  Future<void> _updateMarkers(MarkerUpdates markerUpdates) {
+  Future<void> updateMarkers(MarkerUpdates markerUpdates) {
     assert(markerUpdates != null);
     return _googleMapsFlutterPlatform.updateMarkers(markerUpdates,
         mapId: mapId);

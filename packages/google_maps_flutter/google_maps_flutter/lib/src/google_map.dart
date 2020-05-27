@@ -267,7 +267,7 @@ class _GoogleMapState extends State<GoogleMap> {
   void _updateMarkers() async {
     final GoogleMapController controller = await _controller.future;
     // ignore: unawaited_futures
-    controller._updateMarkers(
+    controller.updateMarkers(
         MarkerUpdates.from(_markers.values.toSet(), widget.markers));
     _markers = keyByMarkerId(widget.markers);
   }
