@@ -281,7 +281,7 @@ class _GoogleMapState extends State<GoogleMap> {
     _googleMapOptions = newOptions;
   }
 
-  void _updateMarkers() async {
+  void updateMarkers() async {
     final GoogleMapController controller = await _controller.future;
     // ignore: unawaited_futures
     controller.updateMarkers(
